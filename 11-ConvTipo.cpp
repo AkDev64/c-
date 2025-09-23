@@ -16,9 +16,9 @@ double d = 9.87;
 
 i = int(d); // notação funcional
 j = (int)d; // notação cast
-std::cout << "apesar de ter feito i e j = d que é: " << d << '\n';
-std::cout << "o valor de i é: " << i << " e o valor de j também é: " << j << " porque foram convertido por explictamente \n";
-std::cout << "a diferença entre esses dois tipos de conversão pode ser obseravada no código do programa \n";
+std::cout << "Para i e j foram atribuidos o valor origianl de d, ou seja: " << d << '\n';
+std::cout << "o valor de i é: " << i << " e o valor de j também é: " << j << " porque ambos foram convertido para o tipo int explictamente, mas de forma de ferente. \n";
+std::cout << "o objetivo é obeservar a diferença entre esses dois tipos de conversão que pode ser encontrada no código do programa \n";
 
 // Conversão com operadores de tipos
 // Operadores
