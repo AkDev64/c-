@@ -10,7 +10,7 @@ bool testar(char parametro){
   switch(parametro) {
     case 's':
       std::cout << "você disse sim";
-      return true;
+      return true; // pode ser usado o break para interromper o switch, nesse caso não é necessário porque o return interrompe a execução da função testar()
     case 'n':
       std::cout << "você disse não";
       return false;
