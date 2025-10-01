@@ -7,10 +7,15 @@
  * Método #2 – erase(it)
  * Método #3 – erase(begIt, endIt)
  * Remoção/adição no meio de um vetor
- * Método #4 – remove(begIt, endIt, value)
- * Método #5 – remove_if(begIt, endIt, predicate)
+ * Método #4 – remove(begIt, endIt, value) - Não usei
+ * Método #5 – remove_if(begIt, endIt, predicate) - Não usei
  * Método #6 (bônus) – clear()
- */
+
+Remoção/adição no meio de um vetor --IMPORTANTE--
+
+Adicionar ou remover um elemento de um vetor em C++ em um lugar que não seja o fim do contêiner é uma operação custosa (ou possivelmente muito custosa), pois requer o deslocamento dos outros elementos que se seguem àquele que foi adicionado ou removido, e pode exigir também um redimensionamento do vetor. Por esta razão, é recomendado que se utilize vetores (do tipo vector) apenas quando se deseja remover/adicionar elementos ao final da sequência. Nos outros casos, pode-se usar deque ou list, por exemplo.
+
+*/
 
 #include<iostream>
 #include<vector>
@@ -95,5 +100,17 @@ int main () {
   vtr.erase(vtr.begin()+1,vtr.end()-1);
   imprime(vtr);
 
-  return 0; 
+// não usei o método remove sugerido pelo cppmoderno.com
+
+// Por fim o método clear para apagar todos os elementos do vetor
+  cout << endl << "apagando todos os elementos restantes do vetor com o método clear: ";
+  vtr.clear(); // agora o vetor está vazio e não pode mais ser impresso
+  imprime(vtr); // só para mostrar que não imprime nada
+  if (vtr.empty()) { 
+    cout << "testado, vetor vtr está vazio agora";
+  }
+
+return 0; 
 }
+
+//ps: escrever esse programa, os erros, debugar, quebrar a cabeça, passar a usar o gemini como assistente foi muito produtivo para efeitos didáticos. Especialmente o erro na primeira versão da função imprime onde a impressão de vtr[i] e i diretamente fizeram toda diferença no entendimento de vetores. o Programa 26-VetoresImprime.cpp é fruto desse entendimento.
