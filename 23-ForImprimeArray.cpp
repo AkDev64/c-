@@ -2,7 +2,7 @@
 
 int main (){
 
-  std::string lista[] = {"Adriano", "Bruno", "Camila", "Silvia"};
+  std::string lista[] = {"adriano", "Bruno", "Camila", "Silvia"};
   int tamanho = sizeof(lista)/sizeof(lista[0]);
   std::cout << "Quantidade de elementos da lista: " << tamanho << '\n'; 
 
