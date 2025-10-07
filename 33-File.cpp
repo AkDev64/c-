@@ -42,8 +42,8 @@ int main(int argc, char *argv[]) {
   // 2) Lendo e escrevendo nos arquivos
 
   // Abrindo e Escrendo no arquivo
-  ofstream arquivo("meuArquivo.txt");
-  arquivo << "Hello Pessoal da Terra" << endl;
+  ofstream arquivo("33-meuArquivo.txt");
+  arquivo << "Olá Pessoal da Terra" << endl;
   arquivo << "Hello World" << endl;
   cout << "abrindo o arquivo" << endl;
 
@@ -51,7 +51,7 @@ int main(int argc, char *argv[]) {
   arquivo.close();
 
   // Lendo dados do arquivo
-  ifstream arquivo2("meuArquivo.txt");
+  ifstream arquivo2("33-meuArquivo.txt");
   string s; // trazendo uma string para a string
   arquivo2 >> s;
   cout << "Imprimindo a primeira string carregada na memória para a tela: " << s
