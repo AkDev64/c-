@@ -1,1 +1,1 @@
-Esse Reposítório corresponde ao Capítulo c++ do projeot polilang
+Esse Reposítório corresponde ao Capítulo c++ do projeto polilang.
