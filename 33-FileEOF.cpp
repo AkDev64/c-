@@ -25,3 +25,6 @@ int main() {
   file.close();
   return 0;
 }
+
+// Esse tratamento de erro é muito importante para consumir por completo o
+// conteúdo de um aruivo
