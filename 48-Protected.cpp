@@ -51,7 +51,7 @@ public:
   }
 
   // A função virtual pura continua a mesma.
-  virtual void exibirDados() = 0;
+  virtual void exibirDados() = 0; // funções virtuais sempre tem esse = 0 ? sim
 
   // --- MUDANÇA 1: Usando 'protected' ---
 protected:
