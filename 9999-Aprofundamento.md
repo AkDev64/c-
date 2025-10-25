@@ -40,10 +40,39 @@ Ser um bom programador C++ também envolve conhecer as ferramentas.
 * **Debuggers:** Domine um debugger como o **GDB** (no Linux) ou o debugger do Visual Studio/CLion. Aprenda a usar breakpoints, inspecionar memória, e analisar a call stack. É impossível resolver problemas complexos sem isso.
 * **Profilers:** Para otimizar performance, você precisa medir. Ferramentas como **Valgrind (Callgrind/Cachegrind)**, Perf (no Linux) ou o profiler do Visual Studio são fundamentais para encontrar gargalos no seu código.
 
-### Resumo do Caminho
+### Etapa 5: Comunidade
 
-1. **Fundamentos Modernos:** Foque em RAII, smart pointers e STL.
-2. **Tópicos Avançados:** Estude templates, concorrência e gerenciamento de memória.
-3. **Prática Intensa:** Crie seus próprios projetos e contribua para outros.
-4. **Ferramentas:** Domine CMake, um debugger e um profiler.
-5. **Comunidade:** Assista a palestras de conferências como CppCon e C++Now no YouTube para se manter atualizado.
+* **Comunidade:** Assista a palestras de conferências como CppCon e C++Now no YouTube para se manter atualizado.
+
+---
+
+## Roteiro de Estudos (Sessões com o Gemini)
+
+Este é um roteiro didático para guiar nossos próximos passos no estudo de C++ moderno.
+
+**Passo 1: Templates (A Base da Programação Genérica)**
+
+*   **Por que começar aqui?** Templates são o que permitem que a STL (Standard Template Library) funcione. Entendê-los primeiro desmistifica todo o resto.
+*   **O que veremos?**
+    1.  **Templates de Função:** Como criar uma única função que opera em múltiplos tipos de dados (ex: uma função `max` que funciona para `int`, `double`, `string`, etc.).
+    2.  **Templates de Classe:** Como criar uma classe que pode conter qualquer tipo de dado (ex: uma classe `Caixa<T>`), o que nos levará diretamente ao conceito dos contêineres da STL.
+
+**Passo 2: Ponteiros Inteligentes (O Gerenciamento de Memória Correto)**
+
+*   **Por que agora?** Acabamos de ver `new` e `delete` e seus perigos (vazamentos de memória). Ponteiros inteligentes são a solução moderna e segura para isso, automatizando o `delete`. É a maneira idiomática de lidar com memória dinâmica em C++ hoje.
+*   **O que veremos?**
+    1.  **`std::unique_ptr`:** Para posse **exclusiva** de um recurso. O "dono" único e intransferível.
+    2.  **`std::shared_ptr`:** Para posse **compartilhada**. A memória só é liberada quando o último ponteiro que aponta para ela for destruído.
+
+**Passo 3: Aprofundamento na STL (Contêineres e Algoritmos)**
+
+*   **Por que agora?** Com o conhecimento de templates e ponteiros inteligentes, podemos explorar a riqueza da STL de forma eficaz.
+*   **O que veremos?**
+    1.  **Visão Geral dos Contêineres:** Quando usar `std::vector` vs. `std::list`? O que é um `std::map` (dicionário)?
+    2.  **Mais Algoritmos e Lambdas:** Usar algoritmos mais avançados como `std::transform` e `std::remove_if`, e introduzir **funções lambda**, que são pequenas funções anônimas que customizam o comportamento dos algoritmos de forma poderosa.
+
+**Passo 4: Tratamento de Exceções (Lidando com Erros)**
+
+*   **Por que por último (nesta lista)?** É um mecanismo para lidar com erros em tempo de execução de forma robusta. É mais fácil de entender seu valor quando já estamos construindo programas um pouco mais complexos com as ferramentas acima.
+*   **O que veremos?**
+    1.  A sintaxe `try`, `throw` e `catch` para lançar e capturar erros.
