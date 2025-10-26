@@ -228,3 +228,61 @@ Placement new
 
 Placement new is a variant of new operator. Normal new operator both allocates memory and constructs an object in that memory. On the other hand, the placement new separates these actions. It allows the programmer to pass a pre-allocated memory block and construct an object in that specific memory.
 
+---
+
+## Explicação Conceitual: Stack vs. Heap
+
+Para entender `new` e `delete`, o conceito mais importante é a diferença entre as duas principais áreas de memória que um programa C++ utiliza: a **Stack** (Pilha) e a **Heap** (Monte).
+
+### 1. A Stack (Memória Automática)
+
+*   **O que é?** É a memória padrão para suas variáveis locais e parâmetros de função. É onde as coisas "vão por padrão".
+    ```cpp
+    void minhaFuncao() {
+        int x = 10; // 'x' é criado na Stack.
+        MinhaClasse obj; // 'obj' também é criado na Stack.
+    }
+    ```
+*   **Como funciona?** O gerenciamento da memória é **automático** e muito rápido. Quando uma variável sai de escopo (por exemplo, a função termina), sua memória é instantaneamente e automaticamente liberada.
+*   **Limitação Principal:** O tamanho de tudo que vai na Stack deve ser conhecido em tempo de compilação. Isso a torna inadequada para dados cujo tamanho só é conhecido durante a execução do programa (como um array cujo tamanho é definido pelo usuário).
+
+### 2. A Heap (Memória Dinâmica ou "Free Store")
+
+*   **O que é?** É uma grande reserva de memória que está disponível para ser usada pelo programa de forma flexível durante sua execução.
+*   **Como funciona?** O gerenciamento da memória é **manual**. Você, o programador, é responsável por:
+    1.  **Pedir** um pedaço da memória quando precisar.
+    2.  **Devolver** esse pedaço quando não for mais necessário.
+*   **Vantagem Principal:** Permite alocar blocos de memória de tamanho dinâmico (decidido em tempo de execução) e permite que esses dados "sobrevivam" fora do escopo em que foram criados.
+
+### `new` e `delete`: As Ferramentas para Gerenciar a Heap
+
+*   `new`: É o operador que você usa para **pedir** (alocar) memória da Heap. Ele prepara o espaço solicitado, chama o construtor do objeto (se for um objeto de classe) e retorna um **ponteiro** contendo o endereço da memória alocada.
+
+*   `delete`: É o operador que você usa para **devolver** (desalocar) a memória para a Heap, tornando-a disponível para uso futuro.
+
+> **A Regra de Ouro:** Para cada `new` bem-sucedido, deve haver uma chamada `delete` correspondente. Esquecer de chamar `delete` causa um **vazamento de memória (memory leak)** — a memória fica "presa" e não pode ser reutilizada até o programa terminar.
+
+### `new[]` e `delete[]`: A Versão para Arrays
+
+Quando você aloca um array (um bloco de múltiplos elementos) dinamicamente, você deve usar as versões de array dos operadores.
+
+*   `new T[N]`: Aloca memória para `N` objetos do tipo `T` e retorna um ponteiro para o primeiro elemento.
+*   `delete[]`: Libera um bloco de memória alocado com `new[]`. O `[]` é crucial, pois garante que o destrutor seja chamado para *cada um* dos `N` objetos no array antes de liberar a memória.
+
+**Exemplo Prático (do arquivo `29-NewDelete.cpp`):**
+
+```cpp
+int n;
+std::cin >> n;
+int* ptr = new int[n]; // Pede espaço para 'n' inteiros na HEAP.
+// ... usa o array ...
+delete[] ptr; // Devolve o bloco inteiro de 'n' inteiros para a HEAP.
+```
+
+### Práticas de Segurança
+
+*   **Vazamento de Memória:** Acontece ao esquecer `delete`.
+*   **Ponteiro Pendurado (Dangling Pointer):** Ocorre quando você acessa um ponteiro *depois* de a memória ter sido liberada com `delete`. O ponteiro aponta para "lixo".
+    *   **Solução:** Após `delete ptr;`, é uma boa prática fazer `ptr = nullptr;`. Isso anula o ponteiro e previne seu uso acidental.
+
+```
