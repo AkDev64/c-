@@ -76,3 +76,30 @@ Este é um roteiro didático para guiar nossos próximos passos no estudo de C++
 *   **Por que por último (nesta lista)?** É um mecanismo para lidar com erros em tempo de execução de forma robusta. É mais fácil de entender seu valor quando já estamos construindo programas um pouco mais complexos com as ferramentas acima.
 *   **O que veremos?**
     1.  A sintaxe `try`, `throw` e `catch` para lançar e capturar erros.
+
+---
+
+## Avaliação de Gaps e Próximos Passos Sugeridos (25/10/2025)
+
+Com base em nossa jornada de estudos até agora, aqui estão os conceitos importantes de C++ que ainda não exploramos ou que poderíamos aprofundar, organizados por relevância e sequência lógica para futuras sessões:
+
+1.  **Semântica de Movimentação (Move Semantics) e Controle de Cópia (Rule of Five/Three/Zero):**
+    *   **Por que:** Essencial para classes que gerenciam recursos e para otimização de performance, evitando cópias desnecessárias. Aprofunda o entendimento de `std::move` e RAII.
+
+2.  **Herança Virtual (Solução do Problema do Diamante):**
+    *   **Por que:** Completa o tópico de herança múltipla e o "Problema do Diamante" que introduzimos.
+
+3.  **Operadores de Cast (`static_cast`, `dynamic_cast`, `reinterpret_cast`, `const_cast`):**
+    *   **Por que:** Fundamentais para conversões de tipo seguras e explícitas em C++, especialmente em contextos de polimorfismo.
+
+4.  **I/O de Arquivos (`fstream`):**
+    *   **Por que:** Leitura e escrita de arquivos é uma necessidade fundamental em quase todo programa.
+
+5.  **Mais Operadores Sobrecargados:**
+    *   **Por que:** Explorar a sobrecarga de `[]` (operador de índice), `()` (operador de chamada de função), `->` (operador de seta) e `*` (desreferência) pode ser muito útil para criar classes que se comportam como ponteiros ou funções.
+
+6.  **Concorrência e Multithreading (Básico):**
+    *   **Por que:** Em sistemas modernos, aproveitar múltiplos núcleos de processamento é vital. Introdução a `std::thread`, `std::mutex` e `std::async` seria um passo importante.
+
+7.  **Mais Contêineres e Utilitários da STL:**
+    *   **Por que:** Explorar `std::array`, `std::deque`, `std::priority_queue`, `std::tuple`, `std::optional`, `std::variant`, `std::any` para expandir o arsenal de estruturas de dados.
