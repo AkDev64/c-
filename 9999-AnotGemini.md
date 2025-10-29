@@ -47,28 +47,29 @@
 
 ## Sessão 3: 25/10/2025
 
-### Tópicos Discutidos:
+### Tópicos Discutidos
 
-1.  **Templates de Função:**
-    *   Explicação e exemplo (`57-FunctionTemplates.cpp`) de como criar funções genéricas.
+1. **Templates de Função:**
+    * Explicação e exemplo (`57-FunctionTemplates.cpp`) de como criar funções genéricas.
 
-2.  **Templates de Classe:**
-    *   Explicação e exemplo (`58-ClassTemplates.cpp`) de como criar classes genéricas.
+2. **Templates de Classe:**
+    * Explicação e exemplo (`58-ClassTemplates.cpp`) de como criar classes genéricas.
 
-3.  **Ponteiros Inteligentes (`std::unique_ptr`, `std::shared_ptr`, `std::weak_ptr`):**
-    *   **`std::unique_ptr`:** Explicação detalhada de RAII, posse única, `std::make_unique` e `std::move`. Arquivo `59-UniquePtr.cpp` e `59-UniquePtrExplicacao.md`.
-    *   **`std::shared_ptr`:** Explicação de posse compartilhada e contagem de referências. Arquivo `60-SharedPtr.cpp`.
-    *   **`std::weak_ptr`:** Explicação do problema de ciclos de referência e como `weak_ptr` o resolve. Arquivo `61-WeakPtr.cpp`.
+3. **Ponteiros Inteligentes (`std::unique_ptr`, `std::shared_ptr`, `std::weak_ptr`):**
+    * **`std::unique_ptr`:** Explicação detalhada de RAII, posse única, `std::make_unique` e `std::move`. Arquivo `59-UniquePtr.cpp` e `59-UniquePtrExplicacao.md`.
+    * **`std::shared_ptr`:** Explicação de posse compartilhada e contagem de referências. Arquivo `60-SharedPtr.cpp`.
+    * **`std::weak_ptr`:** Explicação do problema de ciclos de referência e como `weak_ptr` o resolve. Arquivo `61-WeakPtr.cpp`.
 
-4.  **Aprofundamento na STL (Containers e Algoritmos):**
-    *   **Visão Geral dos Contêineres:** Explicação e exemplo (`62-STL-Containers.cpp`) de `std::vector`, `std::list`, `std::map` e suas características.
-    *   **Algoritmos e Lambdas:** Explicação e exemplo (`63-STL-Algorithms-Lambdas.cpp`) de `std::transform`, `std::remove_if` e o uso de funções lambda com capturas.
+4. **Aprofundamento na STL (Containers e Algoritmos):**
+    * **Visão Geral dos Contêineres:** Explicação e exemplo (`62-STL-Containers.cpp`) de `std::vector`, `std::list`, `std::map` e suas características.
+    * **Algoritmos e Lambdas:** Explicação e exemplo (`63-STL-Algorithms-Lambdas.cpp`) de `std::transform`, `std::remove_if` e o uso de funções lambda com capturas.
 
-5.  **Tratamento de Exceções:**
-    *   Explicação e exemplo (`64-ExceptionHandling.cpp`) de `try`, `catch`, `throw` e desempilhamento da pilha.
+5. **Tratamento de Exceções:**
+    * Explicação e exemplo (`64-ExceptionHandling.cpp`) de `try`, `catch`, `throw` e desempilhamento da pilha.
 
-6.  **Palavra-chave `auto`:**
-    *   Explicação e exemplo (`39-AutoKeyword.cpp`) de dedução de tipo, quando usar e quando ter cautela.
+6. **Palavra-chave `auto`:**
+    * Explicação e exemplo (`39-AutoKeyword.cpp`) de dedução de tipo, quando usar e quando ter cautela.
 
-7.  **Avaliação de Gaps e Roteiro de Próximos Passos:**
-    *   Identificação de conceitos importantes ainda não explorados e sugestão de um roteiro para futuras sessões, salvo em `9999-Aprofundamento.md` e `GEMINI.md`.
+7. **Avaliação de Gaps e Roteiro de Próximos Passos:**
+    * Identificação de conceitos importantes ainda não explorados e sugestão de um roteiro para futuras sessões, salvo em `9999-Aprofundamento.md` e `GEMINI.md`.
+
